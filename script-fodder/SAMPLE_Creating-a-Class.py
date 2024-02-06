@@ -23,10 +23,80 @@ new_user.login()
 #First, add the following dunder method to the definition of the class
 #The def __init__() needs to be at the same indentation level as the
 #attributes of the class so that it will be part of the class definition
-def __init__(self, name, email, pwd, account):
+def __init__(self, name, email, password, account):
     self.name = name
     self.email = email
-    self.pwd = pwd
+    self.password = password
     self.account = account
 
 #The following could then be created in IDLE: New_user = User("Nate Brink", "natebrink@yahoo.com", "Password1", 1234)
+
+
+#////////////////CLASS INHERITANCE////////////////
+    #Inheritance is one of the primary concepts of object-oriented programming.
+    #In some cases you may want all the attributes and methods of a class,
+    #but with additional information that doesn’t necessarily belong to the
+    #original class. The concept is that in some cases you may want to add
+    #additional attributes or methods to a class without having to either
+    #completely duplicate the class or modify the existing class. This would
+    #be creating a child of a class and would inherit all the properties
+    #and functions of the parent class.
+    #As an example, let’s consider the User class. You will probably want to
+    #track basic attributes like name, email, address, etc. about all users
+    #for your site. However, if you have employees and customers using a site,
+    #there are probably additional attributes you want to track for each that
+    #don’t overlap. To make the code as concise as possible, you’d want to have
+    #a parent class of User for the attributes and methods common to both.
+    #You would also want a child class for Employee and Customer that track
+    #the additional attributes and methods for those objects.
+#Demonstrated with code:
+class User:
+    name = 'No Name Provided'
+    email = ' '
+    password = '1234abcd'
+    account = 0
+
+class Employee(User):
+    base_pay = 11.00
+    department = 'General'
+
+class Customer(User):
+    mailing_address = ' '
+    mailing_list = True
+    
+#The User class now has 'Employee' and 'Customer' child classes,
+#with their own added attributes that are unique to them. The child
+#classes also inherit all attributes from the parent class ('User').
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
