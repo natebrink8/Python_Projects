@@ -76,8 +76,19 @@ class ParentWindow(Frame):
         destination = self.destination_dir.get()
         #Gets a list of files in the source directory
         source_files = os.listdir(source)
+    
+    def moveFiles():
+    auto_source_dir.get()
+    auto_destination_dir.get()
+    source_files = os.listdir(auto_source_dir)
+    for i in source_files:
+
+
+
+
         #Runs through each file in the source directory
         for i in source_files:
+
             #moves each file from the source to the destination
             shutil.move(source + '/' + i, destination)
             print(i + 'was successfully transferred.')

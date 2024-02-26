@@ -45,3 +45,11 @@ class faves(fandom):
         msg = "Root, Root-root for your team!"
         print(msg)
 
+
+#Create an object and call the parent class' method:
+profesh = fandom("Nate","123@456.com", "Baseball")
+profesh.message()
+
+#Create an object and call the child class' method:
+profesh1 = pros("April", "a_cakes@789.com", "Football")
+profesh1.message()
